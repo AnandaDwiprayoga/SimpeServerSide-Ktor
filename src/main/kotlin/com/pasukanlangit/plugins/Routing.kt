@@ -90,6 +90,17 @@ fun Application.configureRouting() {
             call.respondFile(file)
         }
 
+        //if there are some endpoint but different http request method just use route to group
+        route("/multiplemethod"){
+            get {
+                call.respondText("this from multiple method with get method")
+            }
+
+            post {
+                call.respondText("this from multiple method with post method")
+            }
+        }
+
         get("/lorem"){
             call.respondText("lorem ipsum dolor sir amet")
         }
