@@ -27,5 +27,8 @@ dependencies {
     testImplementation("org.jetbrains.kotlin:kotlin-test:$kotlin_version")
 
     implementation("org.ktorm:ktorm-core:3.4.1")
+    implementation("org.ktorm:ktorm-support-postgresql:3.4.1")
+    implementation("org.postgresql:postgresql:42.2.23")
     implementation("mysql:mysql-connector-java:8.0.26")
+
 }

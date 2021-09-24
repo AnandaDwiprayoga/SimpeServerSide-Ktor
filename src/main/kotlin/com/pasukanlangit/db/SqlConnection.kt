@@ -7,13 +7,16 @@ import org.ktorm.dsl.*
 
 fun Application.configureDb(){
     val database = Database.connect(
-        url = "jdbc:mysql://192.168.1.8/persewaan",
-        driver ="com.mysql.cj.jdbc.Driver",
-        user = "remotemac"
+        url = "jdbc:postgresql://localhost:8084/ktor_note",
+        driver ="org.postgresql.Driver",
+        user = "",
+        password = ""
     )
 
+
+
     //TODO: insert value
-    //insertNotes(database)
+    insertNotes(database)
 
     //TODO: to read value from table
     //getAllNotes(database)
